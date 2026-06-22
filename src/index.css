@@ -1,0 +1,66 @@
+/* Importação de fontes tecnológicas do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Configuração do tema de fontes e cores do Tailwind CSS v4 */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Paleta cromática futurista e de alto contraste baseada em matrizes escuras e neon */
+  --color-cyber-bg: #090a0f;
+  --color-cyber-card: #11131c;
+  --color-cyber-accent: #00ffcc;     /* Ciano luminoso */
+  --color-cyber-purple: #9d4edd;     /* Roxo vibrante */
+  --color-cyber-pink: #ff007f;       /* Rosa choque eletrônico */
+  --color-cyber-glass: rgba(17, 19, 28, 0.75);
+}
+
+/* Configuração global para rolar a tela de forma suave */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Previne que o cabeçalho fixo tampe o título das seções */
+}
+
+/* Estilo personalizado para a barra de rolagem corporativa (scrollbar) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2233;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffcc; /* Brilha em ciano no hover do ponteiro */
+}
+
+/* Efeito de grade de fundo sutil similar a painéis holográficos de tecnologia */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Efeito de brilho neon pulsante para elementos em destaque */
+@keyframes cyber-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.15), inset 0 0 15px rgba(0, 255, 204, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.35), inset 0 0 25px rgba(0, 255, 204, 0.15);
+  }
+}
+
+.glow-hover:hover {
+  animation: cyber-glow 2s infinite alternate ease-in-out;
+}
+
